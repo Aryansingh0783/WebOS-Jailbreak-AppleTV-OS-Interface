@@ -1,0 +1,7 @@
+#!/bin/sh
+# Homebrew Channel startup script: starts the background watcher that
+# redirects the remote's Home key to com.tvhome.launcher.
+# Installed to /var/lib/webosbrew/init.d/60-home-key by scripts/install.sh.
+HK="/var/lib/webosbrew/homekey.py"
+[ -x "$HK" ] || exit 0
+nohup python2 "$HK" >/tmp/homekey.log 2>&1 &

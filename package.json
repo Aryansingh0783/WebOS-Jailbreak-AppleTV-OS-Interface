@@ -1,0 +1,15 @@
+{
+  "name": "webos-tv-home",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A clean, fast replacement home screen for rooted LG webOS TVs, plus a community app store and a debloat kit.",
+  "scripts": {
+    "build": "bash scripts/build.sh",
+    "install:tv": "bash scripts/install.sh",
+    "uninstall:tv": "bash scripts/uninstall.sh",
+    "debloat": "bash debloat/debloat.sh",
+    "stats": "bash debloat/tv-stats.sh",
+    "check-compat": "bash scripts/check-compat.sh"
+  },
+  "license": "MIT"
+}

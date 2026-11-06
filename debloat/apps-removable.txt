@@ -1,0 +1,18 @@
+# Apps that are generally safe to remove on a webOS 4.x TV, one id per line.
+# Lines starting with # are comments. Edit this file before running
+# debloat.sh if you want to keep any of these.
+#
+# These are LG/partner apps that most people never open. Removing them frees
+# storage and stops their background services. Core system apps
+# (com.webos.app.*, com.palm.*, the Homebrew Channel) are never touched by
+# debloat.sh, regardless of what's in this file.
+com.webos.app.igallery
+com.webos.app.ota
+lgfitness
+com.lg.app.photoglance
+com.lge.sports.live
+sony.pictures.ultra
+amazon.alexa.auto
+google.assistant
+com.lge.app6.familyaidentity
+com.lgtv.ArmbandSetting

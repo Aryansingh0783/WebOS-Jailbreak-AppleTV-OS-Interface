@@ -1,0 +1,12 @@
+#!/bin/sh
+# Homebrew Channel startup script: launches the custom Home a short delay
+# after boot, but only if the TV landed on live TV, the stock launcher, or
+# nothing — never steals focus from an app the user already opened.
+# Installed to /var/lib/webosbrew/init.d/50-tv-home by scripts/install.sh.
+sleep 30
+FG="$(luna-send -n 1 -f luna://com.webos.applicationManager/getForegroundAppInfo '{}' 2>/dev/null | grep -o '"appId":"[^"]*"' | head -1 | cut -d'"' -f4)"
+case "$FG" in
+  ""|com.webos.app.livetv|com.webos.app.discovery|com.webos.app.home)
+    luna-send -n 1 -f luna://com.webos.applicationManager/launch '{"id":"com.tvhome.launcher"}' >/dev/null 2>&1
+    ;;
+esac

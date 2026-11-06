@@ -1,0 +1,15 @@
+{
+  "id": "com.tvhome.store",
+  "version": "1.0.0",
+  "vendor": "tvhome (community project)",
+  "type": "web",
+  "main": "index.html",
+  "title": "App Store",
+  "icon": "icon.png",
+  "largeIcon": "icon.png",
+  "bgColor": "#0a0c11",
+  "iconColor": "#0a0c11",
+  "resolution": "1920x1080",
+  "disableBackHistoryAPI": true,
+  "requiredPermissions": ["identity.operation"]
+}
